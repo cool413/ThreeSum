@@ -20,8 +20,7 @@ namespace ThreeSum
                 var secondIndex = i + 1;
                 var thirdIndex = sortedNums.Length - 1;
 
-                if (firstIndex > 0 &&
-                    IsSameAsPreviousNum(sortedNums, firstIndex))
+                if (IsSameAsPreviousNum(sortedNums, firstIndex))
                 {
                     continue;
                 }
@@ -64,6 +63,8 @@ namespace ThreeSum
 
         private static bool IsSameAsPreviousNum(int[] nums, int index)
         {
+            if (index - 1 < 0) { return false; }
+            
             return nums[index] == nums[index - 1];
         }
 
