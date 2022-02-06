@@ -24,11 +24,11 @@ namespace UnitTest
         {
             get
             {
-                yield return new TestCaseData(null, new List<int[]>());
+                yield return new TestCaseData(null, new List<IList<int>>());
 
-                yield return new TestCaseData(new int[] { }, new List<int[]>());
+                yield return new TestCaseData(new int[] { }, new List<IList<int>>());
 
-                yield return new TestCaseData(new int[] {0}, new List<int[]>());
+                yield return new TestCaseData(new int[] {0}, new List<IList<int>>());
 
                 yield return new TestCaseData(new[] {-1, 0, 1, 2, -1, -4},
                     new List<IList<int>>
